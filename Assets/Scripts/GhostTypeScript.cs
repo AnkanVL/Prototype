@@ -5,18 +5,27 @@ using UnityEngine.Rendering;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-     readonly string[] GhostTypes = new string[5] { "Banshee", "Poltergeist", "Phantom", "Specter", "Wraith" };
+    readonly string[] GhostTypes = new string[5] { "Banshee", "Poltergeist", "Phantom", "Specter", "Wraith" };
+    // Add a field to represent whether the game has started
+    private bool GameStart = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
     {
-
+        // Example: Set GameStart to true to allow Update logic to run
+        GameStart = true;
+        if (GameStart)
+            foreach (string ghost in GhostTypes)
+            {
+                GhostType(ghost);
+            }
     }
 
     // Update is called once per frame
     void Update()
     {
-      Randomizer GhostTypeRandomizer = new Randomizer();
+
     }
 
     void GhostType(string ghostType)
