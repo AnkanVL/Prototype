@@ -1,10 +1,8 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     void Start()
     {
         
@@ -14,10 +12,5 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void GhostType()
-    {
-        // This method is currently empty and does not perform any actions.
     }
 }
