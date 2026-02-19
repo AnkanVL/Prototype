@@ -16,4 +16,10 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log(Equals("User Quit Game"));
     }
+
+    private void OnMouseUpAsButton()
+    {
+        StartGame();
+    }
 }
+
