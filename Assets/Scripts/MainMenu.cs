@@ -21,5 +21,10 @@ public class MainMenu : MonoBehaviour
     {
         StartGame();
     }
+
+    private void OnMouseDown()
+    {
+        QuitGame();
+    }
 }
 
