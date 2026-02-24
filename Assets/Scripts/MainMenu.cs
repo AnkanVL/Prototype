@@ -1,30 +1,29 @@
 using UnityEditor.SearchService;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-   public void StartGame()
+    public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void Settings()
+    {
+        
+        SceneManager.LoadScene("Setting");
+        
     }
 
     // Update is called once per frame
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log(Equals("User Quit Game"));
+        Debug.Log("User Quit Game");
     }
 
-    private void OnMouseUpAsButton()
-    {
-        StartGame();
-    }
-
-    private void OnMouseDown()
-    {
-        QuitGame();
-    }
 }
-
