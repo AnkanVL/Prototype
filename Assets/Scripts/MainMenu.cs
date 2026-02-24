@@ -18,6 +18,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Setting");
         
     }
+    public void AudioSettings()
+    {
+        SceneManager.LoadScene("AudioSetting");
+    }
 
     // Update is called once per frame
     public void QuitGame()
