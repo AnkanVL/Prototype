@@ -1,14 +1,32 @@
-# Prototype
+# **brädspel ideer**
+
+**==================================================**
+
+#### **musik/Spelmusik frågesport**
 
 
 
-This is a 3D Horror project with psychological horror elements to it feel free to use this as a space to share ideas 
+som ett brädspel men med visa rutor har en QR kod till musik samt spel musik där man ska kunna låtens artist sen kan man få bonus poäng för 
 
-also use this to keep track on whats done and what isn't!
+låtens namn när det är spelmusik ska man kunna spelet och för bonus för det exakta spelet.
 
 
 
--- Make a Player And Ghost Type Script: Check!
 
--- program the different ghost scares: Unchecked!
+
+**Svårighets grad i färg**
+
+Grön (easy)
+
+Gul (Medium)
+
+Röd (Hard)
+
+Svart(Challenging)
+
+**==================================================**
+
+**Spel historia**
+
+
 
