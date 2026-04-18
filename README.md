@@ -1,32 +1,16 @@
-# **brädspel ideer**
+# HORROR GAME WW1
 
-**==================================================**
-
-#### **musik/Spelmusik frågesport**
+**========================================**
 
 
 
-som ett brädspel men med visa rutor har en QR kod till musik samt spel musik där man ska kunna låtens artist sen kan man få bonus poäng för 
+**Indie horror Project with low poly Graphics** 
 
-låtens namn när det är spelmusik ska man kunna spelet och för bonus för det exakta spelet.
-
-
+**ambient horror** 
 
 
 
-**Svårighets grad i färg**
-
-Grön (easy)
-
-Gul (Medium)
-
-Röd (Hard)
-
-Svart(Challenging)
-
-**==================================================**
-
-**Spel historia**
+**LETZ GET IT** 
 
 
 
