@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerScript : MonoBehaviour
     public float groundDrag;
     public float airControlMultiplier = 0.4f;
     public bool canMove = true;
+
     
 
     [Header("Ground Check")]
@@ -20,6 +22,7 @@ public class PlayerScript : MonoBehaviour
     bool grounded;
 
     public Transform orientation;
+    public RaycastHit hitInfo;
 
     float horizontalInput;
     float verticalInput;
@@ -27,6 +30,8 @@ public class PlayerScript : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+    public Text pressToTalk;
+    public DialogSystem dialogSystem;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,7 +68,28 @@ public class PlayerScript : MonoBehaviour
             rb.linearDamping = 0;
         }
 
-        
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward); //create a ray shot out of the camera
+        Physics.Raycast(ray, out hitInfo, 10f); //shoot out ray and store whatever it hit in hitInfo
+
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 10, Color.red); //show ray
+
+        if (hitInfo.collider != null && hitInfo.collider.CompareTag("Door"))
+        {
+            pressToTalk.gameObject.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitInfo.collider.GetComponent<DoorScript>().Open(); //get the doorScript from the collided door, then run the Open() function
+            }
+        }
+        else
+        {
+            if (!dialogSystem.canTalk && !dialogSystem.isTalking)
+            {
+                pressToTalk.gameObject.SetActive(false);
+            }
+        }
+
     }
 
     private void FixedUpdate()
@@ -123,5 +149,14 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(new Vector3(0, jumpHeight, 0));
     }
 
+
+    //To-do
+    /* neighbor door system
+     * leaning (should be easy with Cinemachine)
+     * door peaking (maybe)
+     * flashlight (should be easy)
+     * 
+     * create a seperate script that runs through dialog. Can be added onto other objects as a secondary script. Can be called from other scripts
+     */
 }
 

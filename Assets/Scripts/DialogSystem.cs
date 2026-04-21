@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+//WARNING! this DialogSystem is kinda bad and might cause problems in the future. It's not very versitile
 public class DialogSystem : MonoBehaviour
 {
-    private bool canTalk;
-    private bool isTalking;
+    public bool canTalk;
+    public bool isTalking;
     //public Image TextBox;
     public Text E;
     public Text Dialogtext;
