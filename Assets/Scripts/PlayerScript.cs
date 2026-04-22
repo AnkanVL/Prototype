@@ -31,7 +31,9 @@ public class PlayerScript : MonoBehaviour
 
     Rigidbody rb;
     public Text pressToTalk;
+    public Text dialogText;
     public DialogSystem dialogSystem;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -69,7 +71,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward); //create a ray shot out of the camera
-        Physics.Raycast(ray, out hitInfo, 10f); //shoot out ray and store whatever it hit in hitInfo
+        Physics.Raycast(ray, out hitInfo, 3f); //shoot out ray and store whatever it hit in hitInfo
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 10, Color.red); //show ray
 
@@ -82,6 +84,17 @@ public class PlayerScript : MonoBehaviour
                 hitInfo.collider.GetComponent<DoorScript>().Open(); //get the doorScript from the collided door, then run the Open() function
             }
         }
+
+        else if (hitInfo.collider != null && hitInfo.collider.CompareTag("NeighborDoor"))
+        {
+            pressToTalk.gameObject.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitInfo.collider.GetComponent<NeighborDoor>().StartKnockCoroutine(); //get the doorScript from the collided door, then run the Open() function
+            }
+        }
+        
         else
         {
             if (!dialogSystem.canTalk && !dialogSystem.isTalking)
@@ -89,6 +102,8 @@ public class PlayerScript : MonoBehaviour
                 pressToTalk.gameObject.SetActive(false);
             }
         }
+
+
 
     }
 

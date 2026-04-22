@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-//WARNING! this DialogSystem is kinda bad and might cause problems in the future. It's not very versitile
+//WARNING! this DialogSystem is not scalable or adaptable and should only be used for "meaningless" flavortext dialog that doesn't affect any part of the scene.
 public class DialogSystem : MonoBehaviour
 {
     public bool canTalk;
