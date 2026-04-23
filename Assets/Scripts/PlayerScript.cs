@@ -70,8 +70,9 @@ public class PlayerScript : MonoBehaviour
             rb.linearDamping = 0;
         }
 
+        //Interact distance ray
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward); //create a ray shot out of the camera
-        Physics.Raycast(ray, out hitInfo, 3f); //shoot out ray and store whatever it hit in hitInfo
+        Physics.Raycast(ray, out hitInfo, 1.7f); //shoot out ray and store whatever it hit in hitInfo
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 10, Color.red); //show ray
 
@@ -91,10 +92,20 @@ public class PlayerScript : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                hitInfo.collider.GetComponent<NeighborDoor>().StartKnockCoroutine(); //get the doorScript from the collided door, then run the Open() function
+                hitInfo.collider.GetComponent<NeighborDoor>().StartKnockCoroutine();
             }
         }
-        
+
+        else if (hitInfo.collider != null && hitInfo.collider.CompareTag("Interactable"))
+        {
+            pressToTalk.gameObject.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitInfo.collider.GetComponent<NPCInteraction>().StartSequence();
+            }
+        }
+
         else
         {
             if (!dialogSystem.canTalk && !dialogSystem.isTalking)

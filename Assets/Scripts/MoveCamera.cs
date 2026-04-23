@@ -10,4 +10,9 @@ public class MoveCamera : MonoBehaviour
         transform.position = cameraPosition.position;
 
     }
+
+    public void DebugTest()
+    {
+        Debug.Log("it works");
+    }
 }

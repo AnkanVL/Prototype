@@ -47,6 +47,7 @@ public class NeighborDoor : MonoBehaviour
         if (attatchedDialog.dialogFinished)
         {
             isOpen = false;
+            PostDialog();
         }
     }
 
@@ -66,8 +67,9 @@ public class NeighborDoor : MonoBehaviour
 
     public IEnumerator Knock()
     {
-        //play sound
+        //play knock sound
         yield return new WaitForSeconds(1.5f);
+        attatchedDialog.dialogInProgress = true;
         attatchedDialog.dialogFinished = false;
         isOpen = true;
         yield return new WaitForSeconds(0.5f);

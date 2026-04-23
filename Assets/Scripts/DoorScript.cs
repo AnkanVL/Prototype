@@ -32,7 +32,7 @@ public class DoorScript : MonoBehaviour
     public void Open()
     {
         isOpen = !isOpen;
-        StartCoroutine(AutoClose());
+        //StartCoroutine(AutoClose());
     }
 
     private IEnumerator AutoClose() //automatically closes the door after 3 seconds
