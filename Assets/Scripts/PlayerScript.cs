@@ -112,6 +112,10 @@ public class PlayerScript : MonoBehaviour
             {
                 pressToTalk.gameObject.SetActive(false);
             }
+            else if(dialogSystem.canTalk || dialogSystem.isTalking)
+            {
+                pressToTalk.gameObject.SetActive(true);
+            }
         }
 
 

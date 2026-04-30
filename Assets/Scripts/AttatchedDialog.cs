@@ -8,7 +8,7 @@ public class AttatchedDialog : MonoBehaviour
     public bool dialogFinished;
     [Header("Last string is not visable during gameplay")]
     public string[] strings;
-    private int stringNmr = 1;
+    private int stringNmr = 0;
     public Text dialogText;
     
     void Start()
@@ -47,6 +47,11 @@ public class AttatchedDialog : MonoBehaviour
         this.stringNmr = 0;
         dialogText.gameObject.SetActive(true);
         dialogText.text = this.strings[0].ToString();
+    }
+
+    public void StopDialog()
+    {
+
     }
 
 }
