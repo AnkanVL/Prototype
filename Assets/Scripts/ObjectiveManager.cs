@@ -4,7 +4,7 @@ using UnityEngine;
 // Note: Every scene should have a LevelManager object/script that decides what gameObjects should be active, based on the bool values in this script
 public class ObjectiveManager : MonoBehaviour
 {
-
+    public int day;
     public bool talkedToNeighbor;
     public bool talkedToNeighbor2;
     public bool talkedToNPC;

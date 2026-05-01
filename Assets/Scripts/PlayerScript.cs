@@ -106,6 +106,16 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
+        else if (hitInfo.collider != null && hitInfo.collider.CompareTag("PickUp"))
+        {
+            pressToTalk.gameObject.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitInfo.collider.GetComponent<PickUp>().PickUpItem();
+            }
+        }
+
         else
         {
             if (!dialogSystem.canTalk && !dialogSystem.isTalking)

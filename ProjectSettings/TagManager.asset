@@ -7,6 +7,7 @@ TagManager:
   - Door
   - NeighborDoor
   - Interactable
+  - PickUp
   layers:
   - Default
   - TransparentFX

@@ -1601,6 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481d9ecb4e6ee28429f1eb57c78daf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectivesManager
+  day: 0
   talkedToNeighbor: 0
   talkedToNeighbor2: 0
   talkedToNPC: 0
@@ -7692,7 +7693,7 @@ Transform:
   m_GameObject: {fileID: 1388825104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.98, y: 0.587, z: 5.83}
+  m_LocalPosition: {x: -17.36, y: 0.587, z: 20.435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
