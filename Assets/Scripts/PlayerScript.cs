@@ -31,6 +31,7 @@ public class PlayerScript : MonoBehaviour
 
     Rigidbody rb;
     public Text pressToTalk;
+    
     public Text dialogText;
     public DialogSystem dialogSystem;
     
@@ -76,6 +77,9 @@ public class PlayerScript : MonoBehaviour
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 10, Color.red); //show ray
 
+        if (AttatchedDialog.globalDialogInProgress || AttatchedDialog.globalDialogCooldown > 0f) //do nothing if any dialog is in progress or dialogcooldown is over 0
+            return;
+
         if (hitInfo.collider != null && hitInfo.collider.CompareTag("Door"))
         {
             pressToTalk.gameObject.SetActive(true);
@@ -103,6 +107,7 @@ public class PlayerScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 hitInfo.collider.GetComponent<NPCInteraction>().StartSequence();
+                //Debug.Log("Looking at: " + hitInfo.collider.name);
             }
         }
 
@@ -118,11 +123,11 @@ public class PlayerScript : MonoBehaviour
 
         else
         {
-            if (!dialogSystem.canTalk && !dialogSystem.isTalking)
+            if (!AttatchedDialog.globalDialogInProgress)
             {
                 pressToTalk.gameObject.SetActive(false);
             }
-            else if(dialogSystem.canTalk || dialogSystem.isTalking)
+            else if(AttatchedDialog.globalDialogInProgress)
             {
                 pressToTalk.gameObject.SetActive(true);
             }

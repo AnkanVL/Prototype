@@ -1526,6 +1526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   level1Key: 0
+  food: 0
 --- !u!4 &147256768
 Transform:
   m_ObjectHideFlags: 0
@@ -2237,6 +2238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481d9ecb4e6ee28429f1eb57c78daf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectivesManager
+  day: 0
   talkedToNeighbor: 0
   talkedToNeighbor2: 0
   talkedToNPC: 0
@@ -2262,7 +2264,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278161889}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 182e9bbd35657074eaeb1892c1c197da, type: 3}
   m_Name: 
@@ -2504,7 +2506,7 @@ GameObject:
   - component: {fileID: 297715643}
   - component: {fileID: 297715642}
   m_Layer: 0
-  m_Name: lockedDoor
+  m_Name: staticDoor
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2541,8 +2543,9 @@ MonoBehaviour:
   dialogFinished: 1
   strings:
   - It won't budge...
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &297715643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5542,6 +5545,8 @@ MonoBehaviour:
   - Oh.. am I blocking your way?
   - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &765872489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10723,6 +10728,8 @@ MonoBehaviour:
   - It was a gift from great grandma
   - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &1515097592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11064,7 +11071,7 @@ GameObject:
   - component: {fileID: 1539607206}
   - component: {fileID: 1539607208}
   m_Layer: 0
-  m_Name: lockedDoorParent (1)
+  m_Name: lockedDoorParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13603,7 +13610,7 @@ GameObject:
   - component: {fileID: 1938410562}
   - component: {fileID: 1938410561}
   - component: {fileID: 1938410560}
-  - component: {fileID: 1938410559}
+  - component: {fileID: 1938410564}
   m_Layer: 0
   m_Name: lockedDoor
   m_TagString: Interactable
@@ -13626,24 +13633,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1539607207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1938410559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938410557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 910350b6381e78d4385904b08115bfd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AttatchedDialog
-  dialogInProgress: 0
-  dialogFinished: 1
-  strings:
-  - It's locked
-  - final
-  dialogText: {fileID: 267284893}
 --- !u!114 &1938410560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13736,6 +13725,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938410557}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1938410564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938410557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910350b6381e78d4385904b08115bfd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttatchedDialog
+  dialogInProgress: 0
+  dialogFinished: 1
+  strings:
+  - It's locked...
+  dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!1 &1955174273
 GameObject:
   m_ObjectHideFlags: 0
@@ -26072,7 +26080,7 @@ SceneRoots:
   - {fileID: 278161891}
   - {fileID: 765872487}
   - {fileID: 1515097596}
-  - {fileID: 539658259}
   - {fileID: 1539607207}
+  - {fileID: 539658259}
   - {fileID: 1632045013}
   - {fileID: 147256768}

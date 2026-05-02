@@ -11,7 +11,7 @@ public class DialogSystem : MonoBehaviour
     public Text Dialogtext;
     public bool isOptional;
     public bool movementDisabled;
-    public bool notRepeatable;
+    //public bool notRepeatable;
     [Header("Last string is not visable during gameplay")]
     public string[] strings;
     private int stringNmr = 1;
@@ -59,12 +59,15 @@ public class DialogSystem : MonoBehaviour
                 this.stringNmr = 0;
                 canTalk = true;
                 playerScript.canMove = true;
+                AttatchedDialog.globalDialogInProgress = false;
 
+                /*
                 if (notRepeatable)
                 {
                     gameObject.SetActive(false);
                     E.gameObject.SetActive(false);
                 }
+                */
             }
 
         }
@@ -77,7 +80,8 @@ public class DialogSystem : MonoBehaviour
         if (isOptional) //Notify for possible dialog
         {
             E.gameObject.SetActive(true);
-            canTalk = true;
+            AttatchedDialog.globalDialogInProgress = true;
+             canTalk = true;
         }
 
         else //automaticaly start dialog
@@ -86,6 +90,7 @@ public class DialogSystem : MonoBehaviour
             //TextBox.gameObject.SetActive(true);
             Dialogtext.gameObject.SetActive(true);
             Dialogtext.text = strings[0];
+            AttatchedDialog.globalDialogInProgress = true;
 
             if (movementDisabled)
             {
@@ -101,6 +106,7 @@ public class DialogSystem : MonoBehaviour
 
         E.gameObject.SetActive(false);
         //TextBox.gameObject.SetActive(false);
+        AttatchedDialog.globalDialogInProgress = false;
         Dialogtext.gameObject.SetActive(false);
         this.stringNmr = 0;
         canTalk = false;

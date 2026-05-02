@@ -68,6 +68,8 @@ public class NeighborDoor : MonoBehaviour
     public IEnumerator Knock()
     {
         //play knock sound
+        attatchedDialog.playerScript.canMove = false;
+        AttatchedDialog.globalDialogInProgress = true;
         yield return new WaitForSeconds(1.5f);
         attatchedDialog.dialogInProgress = true;
         attatchedDialog.dialogFinished = false;

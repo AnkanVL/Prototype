@@ -493,8 +493,9 @@ MonoBehaviour:
   - Oh do you want to stand here?
   - Absolutely not. Are you dumb?
   - You're lucky enough to have an apartment with windows, so shoo!
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &17880533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,6 +1603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481d9ecb4e6ee28429f1eb57c78daf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectivesManager
+  day: 0
   talkedToNeighbor: 0
   talkedToNeighbor2: 0
   talkedToNPC: 0
@@ -2208,8 +2210,9 @@ MonoBehaviour:
   - I'm your neighbor
   - Lovely weather today innit?
   - Piss off!!
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &405187886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3279,8 +3282,9 @@ MonoBehaviour:
   - I'm your neighbor
   - Lovely weather today innit?
   - Piss off!!
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &580675527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4650,8 +4654,9 @@ MonoBehaviour:
   - Hello!
   - I'm your neighbor
   - Oh.. am I blocking your way?
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &765872489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7185,8 +7190,9 @@ MonoBehaviour:
   - I'm your neighbor
   - Lovely weather today innit?
   - Piss off!!
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &1320479098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8191,8 +8197,9 @@ MonoBehaviour:
   - I'm your neighbor
   - Lovely weather today innit?
   - Piss off!!
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &1460378084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8582,8 +8589,9 @@ MonoBehaviour:
   strings:
   - what a weird looking cube
   - It was a gift from great grandma
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &1515097592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10769,8 +10777,9 @@ MonoBehaviour:
   - I'm your neighbor
   - Lovely weather today innit?
   - Piss off!!
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &1907329593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11521,8 +11530,9 @@ MonoBehaviour:
   - I'm your neighbor
   - Lovely weather today innit?
   - Piss off!!
-  - final
   dialogText: {fileID: 267284893}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &1955282580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23310,6 +23320,10 @@ PrefabInstance:
       propertyPath: Dialogtext
       value: 
       objectReference: {fileID: 267284893}
+    - target: {fileID: 7716988434102719772, guid: c3e0e0b0eda2ce6409aad1f6f3c107b6, type: 3}
+      propertyPath: notRepeatable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7716988434102719772, guid: c3e0e0b0eda2ce6409aad1f6f3c107b6, type: 3}
       propertyPath: 'strings.Array.data[0]'
       value: The air is warmer than usual today
