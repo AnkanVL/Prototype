@@ -4,8 +4,8 @@ using UnityEngine.UI;
 //WARNING! this DialogSystem is not scalable or adaptable and should only be used for "meaningless" flavortext dialog that doesn't affect any part of the scene.
 public class DialogSystem : MonoBehaviour
 {
-    public bool canTalk;
-    public bool isTalking;
+    public bool canTalk; //can maybe get replaced with globalDialogInProgress
+    public bool isTalking; //can maybe get replaced with globalDialogInProgress
     //public Image TextBox;
     public Text E;
     public Text Dialogtext;
@@ -89,6 +89,7 @@ public class DialogSystem : MonoBehaviour
             isTalking = true;
             //TextBox.gameObject.SetActive(true);
             Dialogtext.gameObject.SetActive(true);
+            E.gameObject.SetActive(true);
             Dialogtext.text = strings[0];
             AttatchedDialog.globalDialogInProgress = true;
 

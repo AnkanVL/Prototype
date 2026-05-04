@@ -4,7 +4,7 @@ using UnityEngine.UI;
 //This is a secondary script that needs to be called from another script. Still a bit buggy, needs fixin'
 public class AttatchedDialog : MonoBehaviour
 {
-    public bool dialogInProgress;
+    public bool dialogInProgress; //can maybe get replaced with globalDialogInProgress
     public static bool globalDialogInProgress; //static var keeping track if you are in dialog or not, needed for PressToTalk UI check in playerScript
     public static float globalDialogCooldown = 0f; //cooldown to make sure that you don't accidentaly start repeating dialog after finishing it.
     public bool dialogFinished;
