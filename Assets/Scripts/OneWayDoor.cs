@@ -12,7 +12,7 @@ public class OneWayDoor : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) //Replaces lockedDoor with openable door if player enters trigger
     {
         if(other.tag == "Player")
         {

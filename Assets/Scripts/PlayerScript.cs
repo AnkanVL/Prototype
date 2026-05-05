@@ -123,7 +123,7 @@ public class PlayerScript : MonoBehaviour
 
         else
         {
-            if (!AttatchedDialog.globalDialogInProgress)
+            if (!AttatchedDialog.globalDialogInProgress) //Show/Hide PressToTalk indicator if dialog is in progress or not
             {
                 pressToTalk.gameObject.SetActive(false);
             }
@@ -194,6 +194,8 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(new Vector3(0, jumpHeight, 0));
     }
 
+
+    //Future improvment: a lot of code in this script could get removed if we're not gonna have a jump mechanic
 
     //To-do
     /* neighbor door system

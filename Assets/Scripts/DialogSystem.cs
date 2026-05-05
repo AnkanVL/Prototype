@@ -10,7 +10,7 @@ public class DialogSystem : MonoBehaviour
     public Text E;
     public Text Dialogtext;
     public bool isOptional;
-    public bool movementDisabled;
+    public bool movementDisabled; //movementDisabled == true is currently broken/bugged
     //public bool notRepeatable;
     [Header("Last string is not visable during gameplay")]
     public string[] strings;

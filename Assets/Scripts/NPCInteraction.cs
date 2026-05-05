@@ -1,13 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
+
+//Note: This script can be used for any (non-pick up) interactable, not just NPC's
 public class NPCInteraction : MonoBehaviour
 {
     
     public AttatchedDialog attatchedDialog;
     //public MonoBehaviour interaction; //
     public ObjectiveManager objectives;
-    private bool hasRunPostDialog = false;
+    private bool hasRunPostDialog = false; //used to make PostDialog() only run ONCE
 
     public enum ObjectiveType //choose what switch case will activate after dialog
     {

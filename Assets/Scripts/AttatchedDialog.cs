@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-//This is a secondary script that needs to be called from another script. Still a bit buggy, needs fixin'
+//Important: This is a secondary script that needs to be called from another script.
 public class AttatchedDialog : MonoBehaviour
 {
     public bool dialogInProgress; //can maybe get replaced with globalDialogInProgress
@@ -32,6 +32,7 @@ public class AttatchedDialog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Pre-Checks
         if (globalDialogCooldown > 0f)
         {
             globalDialogCooldown -= Time.deltaTime;
@@ -43,6 +44,8 @@ public class AttatchedDialog : MonoBehaviour
 
         if (inputTimer > 0f) return;
 
+        
+        //Progress through dialog
         if (Input.GetKeyDown(KeyCode.E))
         {
             stringNmr++;
