@@ -8,6 +8,7 @@ TagManager:
   - NeighborDoor
   - Interactable
   - PickUp
+  - GiveFoodDoor
   layers:
   - Default
   - TransparentFX

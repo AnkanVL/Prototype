@@ -33,6 +33,7 @@ public class PlayerScript : MonoBehaviour
     public Text pressToTalk;
     
     public Text dialogText;
+    public Text giveFoodText;
     public DialogSystem dialogSystem;
     
 
@@ -120,6 +121,17 @@ public class PlayerScript : MonoBehaviour
                 hitInfo.collider.GetComponent<PickUp>().PickUpItem();
             }
         }
+        else if (hitInfo.collider != null && hitInfo.collider.CompareTag("GiveFoodDoor"))
+        {
+            pressToTalk.gameObject.SetActive(true);
+            giveFoodText.gameObject.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                hitInfo.collider.GetComponentInParent<GiveFoodScript>().GiveFood();
+                giveFoodText.gameObject.SetActive(false);
+            }
+        }
 
         else
         {
@@ -131,6 +143,12 @@ public class PlayerScript : MonoBehaviour
             {
                 pressToTalk.gameObject.SetActive(true);
             }
+
+            if(giveFoodText != null)
+            {
+                giveFoodText.gameObject.SetActive(false);
+            }
+            
         }
 
 

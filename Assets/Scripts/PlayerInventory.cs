@@ -6,4 +6,5 @@ public class PlayerInventory : MonoBehaviour
 {
     public bool level1Key = false;
     public int food = 0;
+    public static int foodLeftToGive = 2;
 }
