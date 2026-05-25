@@ -2225,6 +2225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807a6a088c258b408c141054e1decce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborDoor
+  shouldOpen: 1
   doorPivot: {fileID: 199753647}
   speed: 2
   attatchedDialog: {fileID: 0}
@@ -3278,10 +3279,7 @@ MonoBehaviour:
   dialogInProgress: 0
   dialogFinished: 0
   strings:
-  - Hello
-  - I'm your neighbor
-  - Lovely weather today innit?
-  - Piss off!!
+  - No response...
   dialogText: {fileID: 267284893}
   player: {fileID: 0}
   playerScript: {fileID: 0}
@@ -3297,6 +3295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807a6a088c258b408c141054e1decce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborDoor
+  shouldOpen: 0
   doorPivot: {fileID: 89009058}
   speed: 2
   attatchedDialog: {fileID: 0}
@@ -6337,6 +6336,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1388825107}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1062497436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1062497439}
+  - component: {fileID: 1062497438}
+  - component: {fileID: 1062497437}
+  m_Layer: 0
+  m_Name: ChangeScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1062497437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062497436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af43778b6c0b44cfc93100533978cbd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScene
+  sceneToLoad: 2
+--- !u!65 &1062497438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062497436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1062497439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062497436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.81, y: 0.98, z: 22.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1084033253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3972406376069857439, guid: c3e0e0b0eda2ce6409aad1f6f3c107b6, type: 3}
@@ -7205,6 +7271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807a6a088c258b408c141054e1decce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborDoor
+  shouldOpen: 1
   doorPivot: {fileID: 1128736020}
   speed: 2
   attatchedDialog: {fileID: 0}
@@ -7674,6 +7741,7 @@ MonoBehaviour:
   orientation: {fileID: 1186904455}
   pressToTalk: {fileID: 975163904}
   dialogText: {fileID: 267284893}
+  giveFoodText: {fileID: 0}
   dialogSystem: {fileID: 1033461202}
 --- !u!54 &1388825106
 Rigidbody:
@@ -8212,6 +8280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807a6a088c258b408c141054e1decce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborDoor
+  shouldOpen: 1
   doorPivot: {fileID: 1288370945}
   speed: 2
   attatchedDialog: {fileID: 0}
@@ -10792,6 +10861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807a6a088c258b408c141054e1decce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborDoor
+  shouldOpen: 1
   doorPivot: {fileID: 682233272}
   speed: 2
   attatchedDialog: {fileID: 0}
@@ -11545,6 +11615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807a6a088c258b408c141054e1decce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborDoor
+  shouldOpen: 1
   doorPivot: {fileID: 110960517}
   speed: 2
   attatchedDialog: {fileID: 0}
@@ -23371,3 +23442,4 @@ SceneRoots:
   - {fileID: 765872487}
   - {fileID: 17880537}
   - {fileID: 1515097596}
+  - {fileID: 1062497439}

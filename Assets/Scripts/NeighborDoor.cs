@@ -4,6 +4,7 @@ using UnityEngine;
 public class NeighborDoor : MonoBehaviour
 {
     private bool isOpen = false;
+    public bool shouldOpen = true;
 
     public Transform doorPivot;
     private float openAngle = 45f;
@@ -73,7 +74,11 @@ public class NeighborDoor : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         attatchedDialog.dialogInProgress = true;
         attatchedDialog.dialogFinished = false;
-        isOpen = true;
+        if (shouldOpen)
+        {
+            isOpen = true;
+        }
+        
         yield return new WaitForSeconds(0.5f);
         PlaySequence();
     }
