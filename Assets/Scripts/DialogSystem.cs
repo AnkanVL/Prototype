@@ -11,7 +11,7 @@ public class DialogSystem : MonoBehaviour
     public Text Dialogtext;
     public bool isOptional;
     public bool movementDisabled; //movementDisabled == true is currently broken/bugged
-    //public bool notRepeatable;
+    public bool notRepeatable;
     [Header("Last string is not visable during gameplay")]
     public string[] strings;
     private int stringNmr = 1;
@@ -61,13 +61,15 @@ public class DialogSystem : MonoBehaviour
                 playerScript.canMove = true;
                 AttatchedDialog.globalDialogInProgress = false;
 
-                /*
+                
                 if (notRepeatable)
                 {
                     gameObject.SetActive(false);
                     E.gameObject.SetActive(false);
+                    AttatchedDialog.globalDialogInProgress = false;
+
                 }
-                */
+                
             }
 
         }
