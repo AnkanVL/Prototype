@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - PickUp
   - GiveFoodDoor
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - WhatIsGround
   - Water
   - UI
-  - 
-  - 
+  - Monster
+  - Obstruction
   - 
   - 
   - 
